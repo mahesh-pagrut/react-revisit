@@ -1,20 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <BrowserRouter>
+      <div className="min-h-screen font-sans">
+        <Navbar />
+        <main className="px-4 md:px-10 py-6">
+          <AppRoutes />
+        </main>
       </div>
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
