@@ -32,9 +32,9 @@ function App() {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6 bg-slate-200">
+    <div className="max-w-7xl mx-auto px-4 py-6 bg-slate-400">
       <div className="flex justify-center m-4" >
-      <h1 className="text-3xl font-bold m-4 text-blue-500 ">
+      <h1 className="text-3xl font-bold m-4 text-white ">
         Products Dashboard
       </h1>
       <input 
@@ -44,7 +44,6 @@ function App() {
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
       />
-
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

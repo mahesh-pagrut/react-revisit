@@ -13,12 +13,13 @@ const ProductCard = ({ product }) => {
         {product.title}
       </h2>
 
-      <p className="text-sm text-gray-500 mb-2 capitalize">
-        {product.category}
-      </p>
-
-      <div className="mt-auto">
-        <p className="text-xl font-bold text-blue-600">${product.price}</p>
+      <div className="mt-auto flex justify-center p-1 rounded-md space-x-2">
+        <div className="text-sm flex items-center font-bold px-3 py-2 text-white bg-slate-400 rounded-md">
+          <span className="text-yellow-300">$</span>&nbsp;{product.price}
+        </div>
+        <div className="text-sm font-bold px-3 py-2 text-white bg-slate-400 rounded-md">
+          {product.category}
+        </div>
       </div>
     </div>
   );
