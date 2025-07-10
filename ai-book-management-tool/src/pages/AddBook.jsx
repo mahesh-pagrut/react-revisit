@@ -3,7 +3,6 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
-// Optional: create a utility later to handle localStorage
 const saveBookToStorage = (book) => {
   const existing = JSON.parse(localStorage.getItem("books")) || [];
   localStorage.setItem("books", JSON.stringify([...existing, book]));
@@ -37,7 +36,7 @@ const AddBook = () => {
     };
     saveBookToStorage(newBook);
     resetForm();
-    navigate("/"); // redirect
+    navigate("/"); 
     toast.success("Book added successfully!");
   };
 
@@ -52,7 +51,7 @@ const AddBook = () => {
       >
         {({ isSubmitting }) => (
           <Form className="space-y-4 bg-white p-6 rounded-xl shadow-md">
-            {/* Title */}
+           
             <div>
               <label className="block font-medium text-gray-700">Title</label>
               <Field
@@ -62,7 +61,6 @@ const AddBook = () => {
               <ErrorMessage name="title" component="div" className="text-red-500 text-sm" />
             </div>
 
-            {/* Author */}
             <div>
               <label className="block font-medium text-gray-700">Author</label>
               <Field
@@ -72,7 +70,6 @@ const AddBook = () => {
               <ErrorMessage name="author" component="div" className="text-red-500 text-sm" />
             </div>
 
-            {/* Genre */}
             <div>
               <label className="block font-medium text-gray-700">Genre</label>
               <Field
@@ -82,7 +79,7 @@ const AddBook = () => {
               <ErrorMessage name="genre" component="div" className="text-red-500 text-sm" />
             </div>
 
-            {/* Price */}
+            
             <div>
               <label className="block font-medium text-gray-700">Price (₹)</label>
               <Field
@@ -93,7 +90,6 @@ const AddBook = () => {
               <ErrorMessage name="price" component="div" className="text-red-500 text-sm" />
             </div>
 
-            {/* Description */}
             <div>
               <label className="block font-medium text-gray-700">Description (optional)</label>
               <Field
@@ -104,7 +100,6 @@ const AddBook = () => {
               <ErrorMessage name="description" component="div" className="text-red-500 text-sm" />
             </div>
 
-            {/* Submit */}
             <button
               type="submit"
               disabled={isSubmitting}

@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
       <Link to="/" className="text-indigoPrimary text-2xl font-bold">
-        📚 BookManager
+        SmartBook
       </Link>
       <div className="space-x-4">
         <Link to="/" className="text-gray-700 hover:text-indigoPrimary">

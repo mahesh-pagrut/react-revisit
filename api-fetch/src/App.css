@@ -1,22 +1,14 @@
-body{
-  background-color: rgb(247, 249, 250);
-  color: black;
-  padding: 20px;
-}
 
-.container{
-  text-align: center;
-  border: solid rgb(228, 236, 235) 4px;
-  margin-bottom: 20px;
-
+.body{
+  background-color:white;
 
 }
+.form{
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:1px solid white;
 
-.container p{
-  color: rgb(166, 168, 169);
 }
-
-.container h3{
-  color: rgb(151, 129, 247);
-}
-

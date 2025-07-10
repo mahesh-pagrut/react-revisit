@@ -8,22 +8,22 @@ const Home = () => {
   const [sortOption, setSortOption] = useState("title");
   const [category, setCategory] = useState("All");
 
-  // Load books initially
+  
   useEffect(() => {
     const storedBooks = getBooksFromStorage();
     setBooks(storedBooks);
   }, []);
 
-  // Apply filter + sort
+
   useEffect(() => {
     let temp = [...books];
 
-    // Filter
+    
     if (category !== "All") {
       temp = temp.filter((book) => book.genre.toLowerCase() === category.toLowerCase());
     }
 
-    // Sort
+    
     if (sortOption === "title") {
       temp.sort((a, b) => a.title.localeCompare(b.title));
     } else if (sortOption === "price") {
@@ -35,11 +35,11 @@ const Home = () => {
 
   return (
     <div className="text-gray-800">
-      <h1 className="text-3xl font-semibold mb-6">📚 All Books</h1>
+      {/* <h1 className="text-3xl font-semibold mb-6">Dashboard</h1> */}
 
       {/* Filter & Sort Controls */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-        {/* Category Filter */}
+        
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
@@ -52,7 +52,7 @@ const Home = () => {
           <option value="Self-help">Self-help</option>
         </select>
 
-        {/* Sort */}
+   
         <select
           value={sortOption}
           onChange={(e) => setSortOption(e.target.value)}
@@ -63,7 +63,6 @@ const Home = () => {
         </select>
       </div>
 
-      {/* Book Cards Grid */}
       {filteredBooks.length > 0 ? (
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {filteredBooks.map((book) => (

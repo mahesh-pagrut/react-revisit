@@ -13,8 +13,14 @@ export const createUser = async (userData) => {
     },
     body: JSON.stringify(userData),
   });
+
+  if (!res.ok) {
+    throw new Error("Failed to create user");
+  }
+
   return res.json();
 };
+
 
 export const updateUser = async (id, updatedData) => {
   await fetch(`${BASE_URL}/${id}`, {

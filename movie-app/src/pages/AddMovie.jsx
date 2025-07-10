@@ -39,7 +39,6 @@ const AddMovie = () => {
           }}
         >
           <Form className="space-y-5">
-            {/* First Row: Title + Director */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-[#4C1D95] mb-1">Title</label>
@@ -61,7 +60,6 @@ const AddMovie = () => {
               </div>
             </div>
 
-            {/* Second Row: Genre + Year */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-[#4C1D95] mb-1">Genre</label>
@@ -84,7 +82,6 @@ const AddMovie = () => {
               </div>
             </div>
 
-            {/* Third Row: Rating */}
             <div>
               <label className="block text-sm font-medium text-[#4C1D95] mb-1">Rating (1–10)</label>
               <Field
@@ -96,7 +93,6 @@ const AddMovie = () => {
               <ErrorMessage name="rating" component="div" className="text-red-500 text-xs mt-1" />
             </div>
 
-            {/* Synopsis – full width */}
             <div>
               <label className="block text-sm font-medium text-[#4C1D95] mb-1">Synopsis</label>
               <Field
@@ -108,8 +104,7 @@ const AddMovie = () => {
               />
               <ErrorMessage name="synopsis" component="div" className="text-red-500 text-xs mt-1" />
             </div>
-
-            {/* Submit Button */}
+         
             <button
               type="submit"
               className="w-full mt-2 bg-[#C084FC] text-white font-semibold py-2 px-4 rounded-md hover:bg-[#A855F7] transition"

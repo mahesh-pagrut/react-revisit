@@ -1,9 +1,9 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// Use your actual API key or use: import.meta.env.VITE_GEMINI_API_KEY
+
 const genAI = new GoogleGenerativeAI("AIzaSyDOZCx01RNx3iNTH4oyjwS4_sgCWe40DS0");
 
-// Update your `getRecommendations()` function to strip Markdown-like backticks before parsing:
+
 
 export const getRecommendations = async ({ title, director, genre }) => {
   const prompt = `Suggest 3 movies similar to "${title}" by ${director} in the ${genre} genre.
@@ -21,10 +21,10 @@ Return ONLY a JSON object with this format (no explanation, no markdown, no back
   const response = await result.response.text();
 
   try {
-    // ✅ Clean response: remove ```json ... ```
+
     const cleaned = response.replace(/```json|```/g, "").trim();
 
-    // ✅ Extract and parse JSON
+  
     const match = cleaned.match(/\{[\s\S]*\}/);
     if (match) {
       const json = JSON.parse(match[0]);

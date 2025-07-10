@@ -32,10 +32,9 @@ const MovieDetail = () => {
 
   return (
     <div className="bg-[#F8F5FF] min-h-screen p-6">
-      {/* Responsive 2-column layout */}
+      
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         
-        {/* Left: Movie Details Card */}
         <div className="bg-white rounded-2xl shadow-md p-6 border border-[#E0D7F9]">
           <h2 className="text-2xl font-bold text-[#6D28D9] mb-3">{movie.title}</h2>
 
@@ -64,7 +63,7 @@ const MovieDetail = () => {
           </div>
         </div>
 
-        {/* Right: AI Recommendations */}
+   
         <div>
           <h3 className="text-lg font-bold text-[#6D28D9] mb-4">
             🤖 AI Movie Recommendations

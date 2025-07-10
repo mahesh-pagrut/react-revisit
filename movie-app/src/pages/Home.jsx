@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <div className="bg-[#F8F5FF] min-h-screen p-6">
-      {/* Filter & Sort Controls */}
+
       <div className="flex flex-col sm:flex-row sm:justify-between gap-4 mb-6">
         <select
           onChange={(e) => setFilter(e.target.value)}
@@ -40,13 +40,13 @@ const Home = () => {
         </select>
       </div>
 
-      {/* Movie Grid */}
+ 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filtered.length > 0 ? (
           filtered.map((movie) => <MovieCard key={movie.id} movie={movie} />)
         ) : (
           <p className="text-center col-span-full text-[#6D28D9] text-lg">
-            No movies found for the selected filter.
+            No moviesss found for the selected filter.
           </p>
         )}
       </div>
