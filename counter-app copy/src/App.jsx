@@ -1,31 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react'
 
-function App() {
+
+const App = () => {
   const [count, setCount] = useState(0)
 
-  const handleInc = () => {
-    setCount((prev) => prev +1 )
-  }
-
-  const handleDec = () => {
-    setCount((prev) => prev - 1 )
-  }
-
-  const handleReset = () => {
-    setCount(0)
-  }
-
-
   return (
-    <>
-      <h1>{count}</h1>
-      <button onClick={handleDec}>Decrement</button>
-      <button onClick={handleInc}>Increment</button>
-      <button onClick={handleReset}>Reset</button>
-    </>
+    <div>
+      <h1>Count:{count}</h1>
+      <button onClick={() => setCount((prev) => prev + 1)}>increment</button>
+      <button onClick={() => setCount((prev) => prev - 1)}>decrement</button>
+      <button onClick={() => setCount((prev) => prev = 0)}>reset</button>
+    </div>
   )
 }
 
