@@ -1,0 +1,17 @@
+.center-orb-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orb-box {
+  width: 600px;
+  height: 600px;
+  padding: 40px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: visible;
+}
