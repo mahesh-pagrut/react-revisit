@@ -1,0 +1,81 @@
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #e0f7fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #26c6da;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #26c6da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    background-color: #00acc1;
+}
+
+.todo-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.todo-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.delete-btn {
+    background: #ff5252;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #ff1744;
+}
+
+.dropdown {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+    background-color: #f9f9f9;
+}
